@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Gotham SSm";
+  src: url("/fonts/gothamssm_light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham SSm";
+  src: url("/fonts/gothamssm_medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham SSm";
+  src: url("/fonts/gothamssm_bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Gotham SSm", sans-serif;
+}
