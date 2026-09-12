@@ -10,20 +10,33 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<header class="py-6 px-10 flex items-center fixed top-0 w-full justify-between z-40">
 			<div class="flex basis-0 flex-grow">
-				<svg 
-					class="h-6 w-32" 
-					viewBox="0 0 342 35" 
-					xmlns="http://www.w3.org/2000/svg"
-					><path fill="currentColor" d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7M308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7" fill="currentColor"></path></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 40" class="h-10 w-auto">
+					<defs>
+						<linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+							<stop offset="0%" stop-color="#3B82F6" />
+							<stop offset="100%" stop-color="#06B6D4" />
+						</linearGradient>
+					</defs>
+					<!-- Icono Brackets -->
+					<g fill="none" stroke="url(#logo-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M10 12L4 20L10 28" />
+						<path d="M26 12L32 20L26 28" />
+						<path d="M19 10L17 30" stroke-width="2.5" />
+					</g>
+					<!-- Texto -->
+					<text x="42" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#0F172A" letter-spacing="-0.5">
+						Dev<tspan fill="#3B82F6">Studio</tspan>
+					</text>
+				</svg>
 			</div>
 			<nav>
 				<ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-					<li><a href=""></a>Model S</li>
-					<li><a href=""></a>Model 3</li>
-					<li><a href=""></a>Model X</li>
-					<li><a href=""></a>Model Y</li>
-					<li><a href=""></a>Powerall</li>
-					<li><a href=""></a>Carga</li>
+					<li><a href=""></a>Item S</li>
+					<li><a href=""></a>Item 3</li>
+					<li><a href=""></a>Item X</li>
+					<li><a href=""></a>Item Y</li>
+					<li><a href=""></a>Item 1</li>
+					<li><a href=""></a>Item 2</li>
 				</ul>				
 			</nav>
 			<nav class="flex flex-grow basis-0 justify-end">
@@ -39,8 +52,8 @@ import Layout from '../layouts/Layout.astro';
 		<section class="bg-black h-screen w-screen text-center relative overflow-hidden">
 			<div class="relative z-30 h-full flex flex-col">
 				<header>
-					<h1 class="pt-40 text-5xl font-medium">Disfrute de Tesla</h1>
-					<p>Programe una prueba de conducción hoy mismo</p>
+					<h1 class="pt-40 text-5xl font-medium">Disfrute del Producto</h1>
+					<p>Programe una prueba del producto hoy mismo</p>
 				</header>
 
 				<footer class="flex flex-col flex-grow justify-end pb-20">
@@ -48,7 +61,7 @@ import Layout from '../layouts/Layout.astro';
 						<a href="#" class="border-[3px] text-sm rounded font-medium text-black px-12 py-2 inline-block bg-white/5
 						  backdrop-blur"
 						>
-						Prueba de conducción</a
+						Prueba del producto</a
 						>
 					</div>
 				</footer>
