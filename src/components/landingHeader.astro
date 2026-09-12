@@ -1,0 +1,58 @@
+---
+import Logo from '../components/logo.astro';
+---
+
+<header 
+  id="landing-header"
+  class="py-6 px-10 flex items-center fixed top-0 w-full justify-between z-40"
+>
+
+  <div class="flex basis-0 flex-grow">
+
+    <Logo />
+
+  </div>
+  <nav>
+    <ul class="flex text-sm [&>li>a]:current-color [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+      <li><a href=""></a>Item S</li>
+      <li><a href=""></a>Item 3</li>
+      <li><a href=""></a>Item X</li>
+      <li><a href=""></a>Item Y</li>
+      <li><a href=""></a>Item 1</li>
+      <li><a href=""></a>Item 2</li>
+    </ul>				
+  </nav>
+  <nav class="flex flex-grow basis-0 justify-end">
+    <ul class="flex text-sm [&>li>a]:current-color [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+      <li><a href=""></a>Soporte</li>
+      <li><a href=""></a>Tienda</li>
+      <li><a href=""></a>Cuenta</li>
+      <li><a href=""></a>Menú</li>
+    </ul>	
+  </nav>
+</header>
+
+<script>
+  
+  const header = document.querySelector('#landing-header')
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.90
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    
+    entries.forEach(entry => {
+
+      const { isIntersecting } = entry
+      if( isIntersecting ){
+        const color = entry.target.getAttribute('data-header-color')
+        header.style.color = color
+      }
+    })
+  }, observerOptions)
+
+  const sections = document.querySelectorAll(".landing-section")
+  sections.forEach((section) => observer.observe(section))
+</script>

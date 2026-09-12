@@ -1,5 +1,7 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import HeroSection from '../components/heroSection.astro';
+import Header from '../components/landingHeader.astro';
+import ItemOne from '../components/itemOne.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -8,68 +10,24 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<main>
-		<header class="py-6 px-10 flex items-center fixed top-0 w-full justify-between z-40">
-			<div class="flex basis-0 flex-grow">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 40" class="h-10 w-auto">
-					<defs>
-						<linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-							<stop offset="0%" stop-color="#3B82F6" />
-							<stop offset="100%" stop-color="#06B6D4" />
-						</linearGradient>
-					</defs>
-					<!-- Icono Brackets -->
-					<g fill="none" stroke="url(#logo-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M10 12L4 20L10 28" />
-						<path d="M26 12L32 20L26 28" />
-						<path d="M19 10L17 30" stroke-width="2.5" />
-					</g>
-					<!-- Texto -->
-					<text x="42" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#0F172A" letter-spacing="-0.5">
-						Dev<tspan fill="#3B82F6">Studio</tspan>
-					</text>
-				</svg>
-			</div>
-			<nav>
-				<ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-					<li><a href=""></a>Item S</li>
-					<li><a href=""></a>Item 3</li>
-					<li><a href=""></a>Item X</li>
-					<li><a href=""></a>Item Y</li>
-					<li><a href=""></a>Item 1</li>
-					<li><a href=""></a>Item 2</li>
-				</ul>				
-			</nav>
-			<nav class="flex flex-grow basis-0 justify-end">
-				<ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-					<li><a href=""></a>Soporte</li>
-					<li><a href=""></a>Tienda</li>
-					<li><a href=""></a>Cuenta</li>
-					<li><a href=""></a>Menú</li>
-				</ul>	
-			</nav>
-		</header>
 
-		<section class="bg-black h-screen w-screen text-center relative overflow-hidden">
-			<div class="relative z-30 h-full flex flex-col">
-				<header>
-					<h1 class="pt-40 text-5xl font-medium">Disfrute del Producto</h1>
-					<p>Programe una prueba del producto hoy mismo</p>
-				</header>
+		<Header />
+		
+		<main class="snap-y snap-mandatory w-full h-screen overflow-x-hidden">
 
-				<footer class="flex flex-col flex-grow justify-end pb-20">
-					<div>
-						<a href="#" class="border-[3px] text-sm rounded font-medium text-black px-12 py-2 inline-block bg-white/5
-						  backdrop-blur"
-						>
-						Prueba del producto</a
-						>
-					</div>
-				</footer>
+			<div class="snap-center">
+				<HeroSection />
 			</div>
-
-			<div class="absolute top-0 bottom-0 h-full w-full">
-				<video autoplay muted loop src="/videos/lorem_video.mp4" class="z-0 h-full w-full object-cover"></video>
+			<div class="snap-center">
+				<ItemOne />	
 			</div>
-		</section>
+			<div class="snap-center">
+				<HeroSection />	
+			</div>
+			<div class="snap-center">
+				<ItemOne />	
+			</div>
+		</main>
+		
 	</main>
 </Layout>
